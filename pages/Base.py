@@ -17,6 +17,9 @@ class Base(object):
     def by_name(self, loc):
         return self.driver.find_element_by_name(loc)
 
+    def by_class(self, loc):
+        return self.driver.find_element_by_class_name(loc)
+
 
     def by_xpath(self, loc):
         return self.driver.find_element_by_xpath(loc)

@@ -12,7 +12,7 @@ class DriverUtil():
         capabilities = {
             "platformName": yaml_data["platformName"],
             "deviceName": yaml_data["deviceName"],
-            "app": r"C:\Users\ASUS\PycharmProjects\py_appium\config" +"/" + yaml_data["app"]
+            "app": r"C:\Users\ASUS" +"/" + yaml_data["app"]
         }
 
         driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",capabilities)
