@@ -1,30 +1,38 @@
 import os
+import sys
 import unittest
-from HTMLTestRunner import HTMLTestRunner
-from utils.addPath import AddPath
+# from HTMLTestRunner import HTMLTestRunner
+from BeautifulReport import BeautifulReport
+
 
 class RunAllCase():
 
     @classmethod
     def setUpClass(cls):
-        AddPath.add_project_path()
+        project_path = os.path.dirname(os.getcwd())
+        sys.path.append(project_path)
+
 
 
     @staticmethod
     def run_all():
         try:
-            report_path =os.path.dirname(os.getcwd())
-            file_apth = report_path + "/report/"
-            if not os.path.exists(file_apth):
-                os.mkdir(file_apth)
-            file_name = file_apth + "result.html"
+            """
+            定义测试报告路径
+            """
+            project_path =os.path.dirname(os.getcwd())
+            report_apth = project_path + "/report/"
+            if not os.path.exists(report_apth):
+                os.mkdir(report_apth)
 
             test_model = "../cases/"
 
             discover = unittest.defaultTestLoader.discover(test_model,pattern="test*.py")
-            with open(file_name,"wb")as f:
-                runner =HTMLTestRunner(stream=f, verbosity=2, title="安卓自动化测试报告",description="测试用例运行详情")
-                runner.run(discover)
+
+            result = BeautifulReport(discover)
+            # log_path为测试报告的生成路径
+            result.report(filename="report",description="安卓自动化报告",log_path=report_apth)
+
 
         except Exception as e:
             print(e)

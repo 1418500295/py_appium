@@ -1,0 +1,1 @@
+测试报告配置：将BeautifulReport文件夹放入到Lib/site-packages下

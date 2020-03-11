@@ -1,7 +1,6 @@
 
 import unittest
 from utils.driverUtil import DriverUtil
-from utils.addPath import AddPath
 from  pages.loginpage import LoginPage
 from config.logConfig import LogConfig
 
@@ -11,7 +10,7 @@ class TestCase(unittest.TestCase):
         self.driver = DriverUtil.get_driver()
         self.driver.implicitly_wait(5)
         self.log = LogConfig().get_log()
-        self.path = AddPath.add_project_path()
+
 
 
 
