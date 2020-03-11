@@ -4,7 +4,6 @@
     <list default="true" id="aec15b87-029c-45dd-a139-605a2c9ee50b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/report/BeautifulReport/sample/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/report/BeautifulReport/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/BeautifulReport" beforeDir="false" afterPath="$PROJECT_DIR$/report/BeautifulReport" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
