@@ -22,7 +22,7 @@ class ChatPage(Base):
 
 
     def qunzu(self):
-        self.by_id_elements(self.qu_zu).click()
+        self.by_id_elements(self.qun_zu).click()
 
 
 

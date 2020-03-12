@@ -7132,21 +7132,38 @@
     "testResult": [
         {
             "className": "TestCase",
-            "methodName": "test_login",
+            "methodName": "test_chat",
             "description": null,
-            "spendTime": "27.0 s",
+            "spendTime": "26.1 s",
             "status": "成功",
             "log": [
-                "2020-03-12 08:58:14,359 - test_logger - INFO - pass",
+                "2020-03-12 15:02:42,787 - test_logger - INFO - pass",
                 ""
+            ]
+        },
+        {
+            "className": "TestCase",
+            "methodName": "test_login",
+            "description": null,
+            "spendTime": "10.2 s",
+            "status": "失败",
+            "log": [
+                "Message: An element could not be located on the page using the given search parameters.\n\n",
+                "Traceback (most recent call last):\n",
+                "  File \"C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\case.py\", line 60, in testPartExecutor\n    yield\n",
+                "  File \"C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\case.py\", line 676, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\case.py\", line 633, in _callTestMethod\n    method()\n",
+                "  File \"C:\\Users\\ASUS\\PycharmProjects\\py_appium\\cases\\test_login.py\", line 29, in test_login\n    login.phone(\"18849464646\")\n",
+                "  File \"C:\\Users\\ASUS\\PycharmProjects\\py_appium\\pages\\login_page.py\", line 22, in phone\n    self.by_id(self.phone_num).send_keys(phone)\n",
+                "AttributeError: 'NoneType' object has no attribute 'send_keys'\n"
             ]
         }
     ],
     "testName": "安卓自动化报告",
-    "testAll": 1,
-    "testFail": 0,
-    "beginTime": "2020-03-12 08:57:47",
-    "totalTime": "27s",
+    "testAll": 2,
+    "testFail": 1,
+    "beginTime": "2020-03-12 15:02:16",
+    "totalTime": "37s",
     "testSkip": 0,
     "testError": 0
 };

@@ -15,7 +15,8 @@ class DriverUtil():
         capabilities = {
             "platformName": yaml_data["platformName"],
             "deviceName": yaml_data["deviceName"],
-            "app": app_path + yaml_data["app"]
+            "app": app_path + yaml_data["app"],
+            # "noReset": yaml_data["noReset"]
         }
 
         driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",capabilities)
