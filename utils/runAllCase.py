@@ -21,9 +21,9 @@ class RunAllCase():
             定义测试报告路径
             """
             project_path =os.path.dirname(os.getcwd())
-            report_apth = project_path + "/report/"
-            if not os.path.exists(report_apth):
-                os.mkdir(report_apth)
+            report_path = project_path + "/report/"
+            if not os.path.exists(report_path):
+                os.mkdir(report_path)
 
             test_model = "../cases/"
 
@@ -31,7 +31,7 @@ class RunAllCase():
 
             result = BeautifulReport(discover)
             # log_path为测试报告的生成路径
-            result.report(filename="report",description="安卓自动化报告",log_path=report_apth)
+            result.report(filename="report",description="安卓自动化报告",log_path=report_path)
 
 
         except Exception as e:
