@@ -1,3 +1,4 @@
+import os
 
 from appium import webdriver
 from utils.operate_yaml import ReadYaml
@@ -8,11 +9,13 @@ yaml_data = ReadYaml.get_yaml("app_config.yaml")
 class DriverUtil():
     @staticmethod
     def get_driver():
+        project_path = os.path.dirname(os.getcwd())
+        app_path = project_path + "/config/"
 
         capabilities = {
             "platformName": yaml_data["platformName"],
             "deviceName": yaml_data["deviceName"],
-            "app": r"C:\Users\ASUS\PycharmProjects\py_appium\config" +"/" + yaml_data["app"]
+            "app": app_path + yaml_data["app"]
         }
 
         driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",capabilities)

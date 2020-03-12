@@ -24,6 +24,9 @@ class LoginPage(Base):
     def btn(self):
         self.by_id(self.login_btn).click()
 
+    def verify(self, verify):
+        self.by_id(self.verify_num).send_keys(verify)
+
 
 
 

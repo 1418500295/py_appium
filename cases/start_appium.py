@@ -22,10 +22,47 @@ driver.find_element_by_android_uiautomator('new UiSelector().text("果果5149客
 
 driver.find_element_by_android_uiautomator('new UiSelector().text("确定(3)")').click()
 
+driver.find_element_by_android_uiautomator('new UiSelector().className("android.widget.ImageButton")').click()
+
+width = driver.get_window_size()["width"]
+height =driver.get_window_size()["height"]
+eles = driver.find_elements_by_android_uiautomator('new UiSelector().resourceId("cn.guoguo.chat:id/nameTextView")')
+for one in eles:
+    if "Daine哦" in one.text:
+        one.click()
+        break
+driver.find_element_by_android_uiautomator('new UiSelector().className("android.widget.ImageButton")').click()
+driver.find_element_by_android_uiautomator\
+    ('new UiSelector().resourceId("cn.guoguo.chat:id/me").className("android.widget.FrameLayout")').click()
+driver.find_element_by_android_uiautomator('new UiSelector().text("设置")').click()
+driver.find_element_by_android_uiautomator('new UiSelector().text("退出")').click()
+
+driver.find_element_by_id("cn.guoguo.chat:id/tv_ok").click()
 
 
+"""
+下滑
+"""
+# for i in range(5):
+#
+#     driver.swipe(start_x=180,start_y=1223,end_x=180,end_y=383,duration=2000)
+#     time.sleep(0.5)
+# print(width)
 
 
+"""
+右滑
+"""
+# for i in range(3):
+#     driver.swipe(start_x=width*0.8,start_y=height*0.5,end_x=width*0.2,end_y=height*0.5)
+#     time.sleep(0.5)
+#
+"""
+左滑
+"""
+# for i in range(3):
+#     driver.swipe(start_x=width*0.2,start_y=height*0.5,end_x=width*0.8,end_y=height*0.5)
+#     time.sleep(0.5)
 
 
 
