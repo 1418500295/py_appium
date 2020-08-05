@@ -2,3 +2,6 @@ platformName: Android
 deviceName: 127.0.0.1:62001
 app: chat_1.0.0.apk
 noReset: true
+appPackage: com.marksixvideo
+appActivity: com.marksixvideo.ui.activity.StartActivity
+

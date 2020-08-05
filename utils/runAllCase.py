@@ -12,8 +12,6 @@ class RunAllCase():
         project_path = os.path.dirname(os.getcwd())
         sys.path.append(project_path)
 
-
-
     @staticmethod
     def run_all():
         try:
@@ -36,6 +34,7 @@ class RunAllCase():
 
         except Exception as e:
             print(e)
+
     @classmethod
     def tearDownClass(cls):
         print("测试结束")

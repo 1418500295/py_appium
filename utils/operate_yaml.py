@@ -15,3 +15,4 @@ class ReadYaml():
 
 if __name__ == '__main__':
     print(ReadYaml.get_yaml("app_config.yaml"))
+    print(type(ReadYaml.get_yaml("app_config.yaml")))

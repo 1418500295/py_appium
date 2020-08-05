@@ -4,7 +4,8 @@ import sys
 
 class LogConfig():
 
-    def get_log(self):
+    @staticmethod
+    def get_log():
         # 创建一个日志器logger并设置其日志级别为DEBUG
         logger = logging.getLogger("test_logger")
         logger.setLevel(logging.DEBUG)
